@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Moda Web Standards Initiative</title>
+
+    <meta name="description" content="A presentation for Marketing and BSAs from the Moda FED team">
+    <meta name="author" content="Josh Schneider">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/mktfed.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+    document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h1><span class="logo">Moda</span> Web Standards Initiative</h1>
+            </section>
+            <section>
+                <h2>Creating process, standards, and guides for efficient and consistent design, development, and testing
+                </h2>
+            </section>
+            <section>
+                <h2>Utilizing <i>
+                            <b>modern tools</b>
+                        </i> to implement industry-standard <i>
+                        <b>best practices</b>
+                        </i> in UX design and front-end development
+                </h2>
+            </section>
+            <section>
+                <h2>The state of things</h2>
+                <ul>
+                    <li data-fragment-index="0" class="fragment">Fragmented sites and fragmented codebases, even for sites with templates that look identical</li>
+                    <li data-fragment-index="1" class="fragment">Designing and developing on the the fly, without appropriate planning for quality and long-term maintenance</li>
+                    <li data-fragment-index="2" class="fragment">Almost no documented standards, including no complete web style guide</li>
+                    <ul>
+                        <li data-fragment-index="3" class="fragment">Conflicting guidelines and patterns from project-to-project</li>
+                    </ul>
+                    <li data-fragment-index="4" class="fragment">No regular practice of site/app optimization on the front-end, which can significantly degrade experience for end-users</li>
+                </ul>
+            </section>
+            <section class="stack">
+                <section>
+                    <h2>Big idea: Unify the web channel</h2>
+                    <h3>(From the ODS/Moda Digital Strategy plan)</h3>
+
+                </section>
+                <section>
+                    <h2>Big idea</h2>
+                    <p>The current digital presence of ODS:</p>
+                    <ul>
+                        <li data-fragment-index="0" class="fragment">A separate design for (fill in the blank)</li>
+                        <li data-fragment-index="1" class="fragment">None of the sites are optimized for mobile platforms</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Big idea</h2>
+                    <p>&ldquo;[W]eb standards and style guidelines for web user interfaces will help development teams provide a consistent look & feel, common navigation, and ultimately customer experience&hellip;&rdquo;</p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Goal: A Living Style Guide</h2>
+                <p data-fragment-index="0" class="fragment">Serves as</p>
+                <ul>
+                    <li data-fragment-index="1" class="fragment">A live, centrally updatable, web reference</li>
+                    <li data-fragment-index="2" class="fragment">A standard codebase reference</li>
+                    <li data-fragment-index="3" class="fragment">A platform for enabling smarter, faster, and more consistent design-&gt;development workflow</li>
+                    <li data-fragment-index="4" class="fragment">A place to implement design and development practices that will make our sites better (faster, stronger, taller, whiter teeth, etc)</li>
+                </ul>
+                <hr class="fragment" data-fragment-index="5">
+                <p data-fragment-index="5" class="fragment"><a target="_blank" href="http://styleguide.joshfry.me">Example</a>
+                </p>
+                <p data-fragment-index="6" class="fragment"><a target="_blank" href="http://www.bbc.co.uk/gel">Much more ambitious example</a></p>
+                <p data-fragment-index="7" class="fragment"><a target="blank" href="http://www.slideshare.net/stubbornella/styleguide-jsconf">Evangelism for the added benefits of living style guides</a>
+                </p>
+            </section>
+            <section>
+                <h2>Core topics
+                </h2>
+                <ul>
+                    <li data-fragment-index="0" class="fragment">Responsive-adaptive design</li>
+                    <!--<ul>
+                        <li data-fragment-index="1" class="fragment">Distinctions and variations</li>
+                        <li data-fragment-index="2" class="fragment">Layout grids</li>
+                        <li data-fragment-index="3" class="fragment">Mobile-first approach</li>
+                    </ul>-->
+                    <li data-fragment-index="4" class="fragment">Typographic scale</li>
+                    <li data-fragment-index="5" class="fragment">Form validation</li>
+                    <li data-fragment-index="7" class="fragment">UI libraries, targeted tools, frameworks</li>
+                    <li data-fragment-index="8" class="fragment">Theming vs browser chrome</li>
+                    <li data-fragment-index="9" class="fragment">Branding vs native UI emulation</li>
+                    <li data-fragment-index="10" class="fragment">Graded browser and device support matrix</li>
+                    <li data-fragment-index="11" class="fragment">Collaboration</li>
+                </ul>
+            </section>
+            <section class="stack">
+                <section>
+                    <h2>Responsive - Adaptive</h2>
+                    <p>One site/application serves all devices</p>
+                    <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/203011/responsive-design.jpg">
+                </section>
+                <section>
+                    <h2>Elements of Responsive Design</h2>
+                    <h3>Fluid</h3>
+
+                    <p class="fragment" data-fragment-index="0">Design in proportions, not pixels</p>
+                    <p class="fragment" data-fragment-index="1">Elements continuously resize/reflow as viewport size changes</p>
+                    <hr class="fragment" data-fragment-index="2">
+                    <p data-fragment-index="2" class="fragment">
+                        <a href="http://clearleft.com" target="_blank">Example</a>
+                    </p>
+                </section>
+                <section>
+                    <h2>Elements of Responsive Design</h2>
+                    <h3>Media queries and breakpoints</h3>
+
+                    <p data-fragment-index="0" class="fragment">Page elements and layout can fundamentally change at specific viewport sizes, when device orientation changes, etc</p>
+                    <p data-fragment-index="1" class="fragment">Elements may reorder themselves, vertically and/or horizontally</p>
+                    <!-- <p data-fragment-index="2" class="fragment">UX can change, e.g. horizontal menu -&gt; hamburger/stack menu</p> -->
+                    <hr class="fragment" data-fragment-index="3">
+                    <p data-fragment-index="3" class="fragment">
+                        <a href="http://thenextweb.com" target="_blank">Example</a>
+                    </p>
+                </section>
+                <section>
+                    <h2>Elements of Responsive Design</h2>
+                    <h3>Responsive elements</h3>
+                    <p class="fragment" data-fragment-index="0">
+                        Page elements like images may also be delivered in multiple sizes or versions for different breakpoint ranges
+                    </p>
+                    <hr class="fragment" data-fragment-index="1">
+                    <p class="fragment" data-fragment-index="1">
+                        <a href="http://gumbyframework.com/docs/extensions/#!/responsive-images" target="_blank">Example</a>
+                    </p>
+                </section>
+                <section>
+                    <h2>Elements of Responsive Design</h2>
+                    <h3>CSS grid system</h3>
+                    <p data-fragment-index="0" class="fragment">Defines columns, gutters, and rows, for clean and consistent layout</p>
+
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">
+                            <a href="http://www.designinfluences.com/fluid960gs/" target="_blank">Fluid grid</a>
+                        </li>
+
+                        <li data-fragment-index="2" class="fragment">
+                            <a href="http://www.getskeleton.com/#grid" target="_blank">Responsive grid</a>
+                        </li>
+
+                        <li data-fragment-index="3" class="fragment">
+                            <a href="http://gumbyframework.com/features/grid/" target="_blank">Fluid, responsive grid</a>
+                        </li>
+                    </ul>
+
+                    <ul>
+
+                    </ul>
+                    <p class="fragment" data-fragment-index="4">
+                        With a fluid, responsive grid, layout elements stretch/shrink horizontally and layout can also fundamentally change at specified breakpoints, determined by media queries.
+                    </p>
+                </section>
+                <section>
+                    <h2>Adaptive
+                    </h2>
+                    <p class="fragment" data-fragment-index="0">Beyond media queries and breakpoints, other techniques are used to deliver unique content or UX tailored to specific devices or device capabilities</p>
+                    <hr class="fragment" data-fragment-index="1">
+                    <p class="fragment" data-fragment-index="1">
+                        <a href="http://www.threadless.com/" target="_blank">Example</a>
+                    </p>
+                    <p class="fragment" data-fragment-index="2">
+                        <a href="http://www.etsy.com/" target="_blank">Another example - change the UA and watch it reflow</a>
+                    </p>
+                </section>
+                <section>
+                    <h2>Mobile-first philosophy</h2>
+                    <p data-fragment-index="0" class="fragment">Make design, UX, <b>
+                            <i>content</i>
+                        </b>, and development choices optimal for</p>
+
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">
+                            small viewports
+
+                        </li>
+                        <li data-fragment-index="2" class="fragment">
+                            limited bandwidth
+
+                        </li>
+                        <li data-fragment-index="3" class="fragment">
+                            touch-based input
+
+                        </li>
+                        <li data-fragment-index="4" class="fragment">
+                            short attention span&nbsp;…
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Mobile-first</h2>
+                    <h3>Progressive enhancement</h3>
+
+                    <p data-fragment-index="0" class="fragment">Mobile-first is an extension of "progressive enhancement" philosophy</p>
+
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">
+                            Mobile UX is baseline
+                        </li>
+                        <li data-fragment-index="2" class="fragment">
+                            "Scale up" for
+                        </li>
+                        <ul>
+                            <li class="fragment" data-fragment-index="3">larger viewports</li>
+                            <li class="fragment" data-fragment-index="4">higher bandwidth</li>
+                            <li class="fragment" data-fragment-index="5">other types of input (mouse, etc.) …</li>
+                        </ul>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Mobile-first</h2>
+
+                    <p data-fragment-index="0" class="fragment">
+                        Allow mobile UX priority to guide design decisions, promoting leaner, cleaner sites for all users
+
+                    </p>
+                </section>
+            </section>
+            <section>
+                <h2>Typographic scale</h2>
+                <p class="fragment" data-fragment-index="0">Similar to a layout grid, but specifically for creating consistent and visually pleasing typographic rhythm and flow.
+                </p>
+                <ul>
+                    <li class="fragment" data-fragment-index="1">Take some of the guesswork out of typographic layout</li>
+                    <li class="fragment" data-fragment-index="2">Approach based on established ratios and mathematical formulas</li>
+                    <li class="fragment" data-fragment-index="3">Avoid layout breakage associated with &ldquo;pixel pushing&rdquo;</li>
+                </ul>
+                <hr class="fragment" data-fragment-index="4">
+                <p class="fragment" data-fragment-index="4">
+                    <a href="http://typeplate.com/demo.html" target="_blank">Example with switch for &ldquo;with and without scale&rdquo;</a>
+                </p>
+            </section>
+
+            <section>
+                <h2>Form validation</h2>
+                <p data-fragment-index="0" class="fragment">All websites and applications should have predictable, meaningful, and unobtrusive form validation and client-side feedback</p>
+
+                <p data-fragment-index="1" class="fragment">Currently, validation schemes are inconsistent, even within a single app, and have changed from project-to-project</p>
+
+                <p data-fragment-index="2" class="fragment">Goal: Have a global approach, with documented standards, for simplicity and appropriateness of feedback
+                </p>
+            </section>
+            <section class="stack">
+                <section>
+                    <h2>Toolset: UI libraries, targeted tools, all-in-one frameworks</h2>
+                    <p>The what and the why.</p>
+                </section>
+                <section>
+                    <h2>UI libraries we have used (jQuery UI and jQuery Mobile)
+                    </h2>
+                    <p data-fragment-index="0" class="fragment left">Strong points:
+                    </p>
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">Consistency of behavior across browsers and devices</li>
+                        <li data-fragment-index="2" class="fragment">Style consistency (themes) "baked-in"</li>
+                    </ul>
+                    <p data-fragment-index="3" class="fragment">Issues:</p>
+                    <ul>
+                        <li data-fragment-index="4" class="fragment">May take over too much, making customization difficult</li>
+                        <li data-fragment-index="5" class="fragment">May conflict with other tools</li>
+                        <li data-fragment-index="6" class="fragment">Not a single, responsive toolset (perpetuates mobile/desktop divide)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Targeted tools</h2>
+                    <p>We have also used and may continue to use many single-purpose tools, to deliver features such as</p>
+                    <ul>
+                        <li class="fragment" data-fragment-index="0">stylized drop-downs and other form elements</li>
+                        <li class="fragment" data-fragment-index="1">dynamic tables</li>
+                        <li class="fragment" data-fragment-index="2">form validation and feedback</li>
+                        <li class="fragment" data-fragment-index="3">date-pickers</li>
+                        <li class="fragment" data-fragment-index="4">rich-text editors</li>
+                        <li class="fragment" data-fragment-index="5">graphs/charts&nbsp;&hellip;</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Targeted tools</h2>
+                    <p class="fragment" data-fragment-index="0">Advantages:</p>
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">Use only what you need (potentially lighter weight)</li>
+                        <li data-fragment-index="2" class="fragment">Won't take over an application</li>
+                        <li data-fragment-index="3" class="fragment">May offer features not found in UI libraries</li>
+                    </ul>
+                    <p class="fragment" data-fragment-index="4">Disadvantages:</p>
+                    <ul>
+                        <li data-fragment-index="5" class="fragment">Uniform theming can be more difficult</li>
+                        <li data-fragment-index="6" class="fragment">May increase development time</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>All-In-One Frameworks</h2>
+                    <p class="fragment" data-fragment-index="0">We are evaluating the use of newer, all-in-one frameworks that can provide, among other things:</p>
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">Responsive-adaptive design and tools with a grid</li>
+                        <li data-fragment-index="2" class="fragment">Typographic scale</li>
+                        <li data-fragment-index="3" class="fragment">Boilerplate markup and best practices, such as a "normalized" CSS baseline, for handling common browser inconsistencies</li>
+                        <li data-fragment-index="4" class="fragment">Themable, minimalist UI library/toolset</li>
+                        <li data-fragment-index="5" class="fragment">Sprites/SVG icon sets</li>
+                        <li data-fragment-index="6" class="fragment">Features like form validation</li>
+                    </ul>
+                    <hr class="fragment" data-fragment-index="7">
+                    <p data-fragment-index="7" class="fragment">
+                        <a href="http://gumbyframework.com/features/" target="_blank">Example</a>
+                    </p>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <h2>Theming vs browser chrome</h2>
+                    <p data-fragment-index="0" class="fragment">With some elements, particularly form inputs, we might debate the pros and cons of custom theming (i.e., branding) vs leaving styling to browsers (chrome)</p>
+                </section>
+                <section>
+                    <h2>Theming vs browser chrome</h2>
+                    <div>
+                        <p data-fragment-index="0" class="fragment">Some form elements (e.g., selects/drop-downs), must be fundamentally reconstructed by a library in order to be themed</p>
+                        <p data-fragment-index="1" class="fragment">
+                            <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/207481/Capture.JPG">&nbsp;</p>
+                        <p data-fragment-index="2" class="fragment">Can add complexity for development and appropriate validation feedback</p>
+                    </div>
+                </section>
+                <section>
+                    <h2>Theming vs browser chrome</h2>
+                    <div class="fragment" data-fragment-index="0">
+                        By theming elements and overriding browser chrome, we may also override accessibility features (like focus hinting)
+                    </div>
+                    <div class="fragment" data-fragment-index="1">
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/207520/Untitled-2.png">
+                    </div>
+                </section>
+            </section>
+            <section class="stack">
+                <section>
+                    <h2>Branding vs native UI emulation</h2>
+                    <ul>
+                        <li data-fragment-index="0" class="fragment">We are not writing native applications</li>
+                        <li data-fragment-index="1" class="fragment">On the desktop, our sites and apps are Moda-branded</li>
+                        <li data-fragment-index="2" class="fragment">On mobile, we have attempted to emulate the UI of a mobile OS (iOS, particularly)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Branding vs native UI emulation</h2>
+                    <p data-fragment-index="0" class="fragment">These are two completely different tools that do the same thing</p>
+                    <div data-fragment-index="0" class="fragment">
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/201547/ebill_date.JPG">
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/201548/mobile2_date.JPG">
+                    </div>
+                    <p data-fragment-index="1" class="fragment">Not maintainable, or inherently in line with responsive design</p>
+                </section>
+                <section>
+                    <h2>Branding vs native UI emulation</h2>
+                    <p data-fragment-index="0" class="fragment">If our goal is to develop responsive sites and applications, we propose that:</p>
+
+                    <ul>
+                        <li data-fragment-index="1" class="fragment">
+                            It's too complex to maintain this dichotomy.
+                        </li>
+                        <li data-fragment-index="2" class="fragment">
+                            We should design and develop to the brand, and not try to emulate an OS.
+                        </li>
+                    </ul>
+                    <p>
+                    </p>
+                </section>
+            </section>
+
+            <section class="stack">
+                <section>
+                    <h2>Graded browser/device support matrix</h2>
+                    <p class="fragment" data-fragment-index="0">Establish and maintain a matrix of browser and device support, with categories such as (summarized from Yahoo's YUI library standards):</p>
+
+                    <ul>
+                        <li class="fragment" data-fragment-index="1">
+                            <strong>A-grade:</strong> Fully tested browsers/devices that provide top-level UX ("advanced functionality and visual fidelity")
+                        </li>
+                        <li class="fragment" data-fragment-index="2">
+                            <strong>C-grade:</strong> An identified set of browsers/devices that should provide minimally acceptable UX (aka, "core support"); a handful of these will be tested
+                        </li>
+                        <li class="fragment" data-fragment-index="3">
+                            <strong>X-grade:</strong> Identified and expected to deliver good UX, but not tested; also all unknown/unidentified browsers/devices, and known new, but untested versions
+                        </li>
+                        <li class="fragment" data-fragment-index="4">
+                            <strong>Unsupported</strong> (optional, and debatably a bad idea): Identified browsers/devices that may provide completely broken UX, or have no guarantee of "core support." 
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h2>Graded browser/device support matrix</h2>
+                    <ul>
+                        <li class="fragment" data-fragment-index="0">
+                            Make decisions based on our own and industry analytics
+                        </li>
+                        <li class="fragment" data-fragment-index="1">
+                            Should be reassessed every 6 months
+                        </li>
+                    </ul>
+                    <div class="fragment" data-fragment-index="2">
+                        <img class="animator" src="images/arrow_animated-green.gif" width="140" height="174">
+                    </div>
+                </section>
+
+                <!--<section>
+                    <h2>Desktop browser trends</h2>
+                    <div>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/208537/Untitled-1.png">
+                    </div>
+                </section>-->
+                <section>
+                    <h2>Desktop browser trends</h2>
+                    <div>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/219640/Moda_Browsers.png">
+                    </div>
+                </section>
+                 <section>
+                    <h2>Browser version trends</h2>
+                    <div>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/219648/Moda_IE.png">
+                    </div>
+                </section>
+                <section>
+                    <h2>Device trends</h2>
+                    <div>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/219652/Moda_Mobile_OS.png">
+                    </div>
+                </section>
+                <section>
+                    <h2>Platform trends</h2>
+                    <div>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/219650/Moda_Devices.png">
+                    </div>
+                </section>
+                <section>
+                    <h2>Trends for particular browsers</h2>
+                    <p>(Waiting for things to die)</p>
+                    <p>
+                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/joshtestods-gmail-com/images/208446/Analytics-Filtered-www.png">
+
+                    </p>
+                </section>
+            </section>
+
+            <section>
+                <h2>Collaboration</h2>
+                <p class="fragment" data-fragment-index="0">Marketing and FED need to work together to develop standards and implement a living style guide</p>
+
+                <p class="fragment" data-fragment-index="1">The BSA team should provide input, and test to the resulting standards across sites and applications
+                </p>
+
+                <p class="fragment" data-fragment-index="2">Ongoing collaboration as new projects are developed will help us maintain and improve our standards and processes.
+                </p>
+
+                <!--<p class="fragment" data-fragment-index="1">Both teams should be involved early in project planning, to evaluate the technical needs of design and the design requirements of development</p>
+
+                <p class="fragment" data-fragment-index="2">Need to promote open and direct communication between Development and Marketing, while also acknowledging the need for BSAs to collaborate and remain informed
+                </p>-->
+            </section>
+            <section id="end">
+                <h2>Please Vote Yes On Proposition One</h2>
+            </section>
+        </div>
+
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            overview: true,
+            loop: true,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+            //Parallax scrolling
+            parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            //parallaxBackgroundSize: '2100px 900px',
+            parallaxBackgroundSize: '2850px 1218px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+        </script>
+
+</body>
+
+</html>
